@@ -135,18 +135,19 @@ dhcp_server: 172.18.244.48
 all:
   children:
     kl:
-      leaf:
-        hosts:
-          kgtg-slf-1-6:
-          kgtg-slf-1-7:
-        vars:
-          ansible_network_os: nvidia.nvue.nvue
-      spine:
-        hosts:
-          kgtg-ssp-1-7:
-          kgtg-ssp-1-8:
-        vars:
-          ansible_network_os: nvidia.nvue.nvue
+      children:
+        leaf:
+          hosts:
+            kgtg-slf-1-6:
+            kgtg-slf-1-7:
+          vars:
+            ansible_network_os: nvidia.nvue.nvue
+        spine:
+          hosts:
+            kgtg-ssp-1-7:
+            kgtg-ssp-1-8:
+          vars:
+            ansible_network_os: nvidia.nvue.nvue
 ```
 
 ---
