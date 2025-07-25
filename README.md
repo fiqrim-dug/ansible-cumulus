@@ -36,7 +36,7 @@ This repository automates NVIDIA NVUE switch configuration using Ansible. It sup
 ┌───-─────────────────┐
 │ Role Execution      │
 │ - Interfaces        │
-│ - SNMP, TACACS      │
+│ - SNMP, TACACS(TBD) │
 │ - Description/Host  │
 │ All under same revid│
 └────┬────────────────┘
