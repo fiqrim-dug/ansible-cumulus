@@ -1,6 +1,6 @@
 # Ansible NVUE Switch Configuration
 
-This repository automates NVIDIA NVUE switch configuration using Ansible. It supports both **leaf** , with the following key features:
+This repository automates NVIDIA NVUE switch configuration using Ansible. It supports both **leaf** and spine switches, with the following key features:
 
 - Modular roles per function (interface, breakout etc)
 - Single atomic revision per playbook run
