@@ -1,0 +1,9 @@
+
+# bridge_domain: spine_br
+# breakout_parent: swp1
+# breakout_interfaces:
+#   - swp1s0
+#   - swp1s1
+# access_vlan: 2600
+# trunk_vlans: [2600, 2601]
+# rollback: false

@@ -1,0 +1,25 @@
+- name: Set breakout interface
+  nvidia.nvue.interface:
+    state: merged
+    revid: '{{ revision.revid }}'
+    data:
+      - id: '{{ breakout_interface }}'
+        link:
+          breakout:
+            - id: '{{ breakout_mode }}'
+  register: breakout_config
+
+- name: Set bridge interface
+  nvidia.nvue.interface:
+    state: merged
+    revid: '{{ revision.revid }}'
+    data:
+      - id: '{{ vlan_interface }}'
+        bridge:
+          domain:
+          - id: '{{ bridge_domain }}'
+            untagged: '{{ untagged_vlan }}'
+            vlan:
+            - id: '{{ vlan_id }}'
+  register: bridge_config
+

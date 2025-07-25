@@ -1,0 +1,27 @@
+- name: Pre NVUE revision
+  hosts: all
+  connection: ansible.netcommon.httpapi
+  gather_facts: false
+  tasks:
+    - name: Include NVUE revision pre
+      include_role:
+        name: nvue_revision
+        tasks_from: pre
+
+- name: Run config
+  hosts: all
+  connection: ansible.netcommon.httpapi
+  gather_facts: false
+  roles:
+    - role: base_config
+    - role: nvue_config
+
+- name: Post NVUE revision
+  hosts: all
+  connection: ansible.netcommon.httpapi
+  gather_facts: false
+  tasks:
+    - name: Include NVUE revision post
+      include_role:
+        name: nvue_revision
+        tasks_from: post

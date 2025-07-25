@@ -1,0 +1,17 @@
+all:
+  children:
+    kl:
+      children:
+        leaf:
+          hosts:
+            kgtg-slf-1-6:
+              breakout_interface: swp5
+              breakout_mode: 4x
+              vlan_id: 2500
+              untagged_vlan: 2500
+
+  vars:
+    ansible_network_os: nvidia.nvue.httpapi
+    ansible_httpapi_port: 8765
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false

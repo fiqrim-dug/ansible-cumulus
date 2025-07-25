@@ -1,0 +1,18 @@
+
+# - name: Show config diff before apply
+#   nvidia.nvue.config:
+#     state: diff
+#     revid: "{{ current_revision }}"
+#   register: diff_output
+#
+# - name: Display NVUE diff
+#   debug:
+#     var: diff_output
+#
+- name: Apply config revision
+  nvidia.nvue.config:
+    state: apply
+    revid: "{{ current_revision }}"
+    force: true
+    wait: 10
+

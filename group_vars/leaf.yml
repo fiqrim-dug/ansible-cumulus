@@ -1,0 +1,2 @@
+bridge_domain: br_default
+vlan_interface: '{{ breakout_interface }}s0-3'

@@ -1,0 +1,20 @@
+
+- name: Backup current config
+  nvidia.nvue.api:
+    operation: get
+  register: pre_config
+
+- name: Save pre-config to file
+  copy:
+    content: "{{ pre_config | to_nice_json }}"
+    dest: "backups/{{ inventory_hostname }}_pre_config.yml"
+
+- name: Create new revision
+  nvidia.nvue.config:
+    state: new
+  register: revision
+
+- name: Set revision fact
+  set_fact:
+    current_revision: "{{ revision.revid }}"
+

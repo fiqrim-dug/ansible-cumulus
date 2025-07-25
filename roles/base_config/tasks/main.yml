@@ -1,0 +1,23 @@
+
+- name: Set dhcp-relay and dns
+  nvidia.nvue.service:
+    state: merged
+    revid: '{{ revision.revid }}'
+    data:
+      dhcp_relay:
+      - id : 'default'
+        server:
+        - id : '{{ dhcp_server }}'
+      dns:
+      - id : 'default'
+        server:
+        - id : '{{ dns01 }}'
+        - id : '{{ dns02 }}'
+
+
+- name: Set hostname
+  nvidia.nvue.system:
+    state: merged
+    revid: '{{ revision.revid }}'
+    data:
+      hostname: "{{ inventory_hostname }}"
