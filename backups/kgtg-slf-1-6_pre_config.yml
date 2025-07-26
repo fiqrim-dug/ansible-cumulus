@@ -2683,6 +2683,508 @@
                 },
                 "type": "swp"
             },
+            "swp5": {
+                "acl": {},
+                "evpn": {
+                    "multihoming": {
+                        "uplink": "off"
+                    }
+                },
+                "ip": {
+                    "address": {},
+                    "gateway": {},
+                    "igmp": {
+                        "enable": "off"
+                    },
+                    "ipv4": {
+                        "forward": "on"
+                    },
+                    "ipv6": {
+                        "enable": "on",
+                        "forward": "on"
+                    },
+                    "neighbor-discovery": {
+                        "dnssl": {},
+                        "enable": "on",
+                        "home-agent": {
+                            "enable": "off"
+                        },
+                        "prefix": {},
+                        "rdnss": {},
+                        "router-advertisement": {
+                            "enable": "off"
+                        }
+                    },
+                    "vrf": "default",
+                    "vrrp": {
+                        "enable": "off"
+                    }
+                },
+                "link": {
+                    "auto-negotiate": "on",
+                    "breakout": {
+                        "4x": {}
+                    },
+                    "duplex": "full",
+                    "fec": "auto",
+                    "flap-protection": {
+                        "enable": "on"
+                    },
+                    "mtu": 9216,
+                    "speed": "auto",
+                    "state": {
+                        "up": {}
+                    }
+                },
+                "lldp": {},
+                "neighbor": {
+                    "ipv4": {},
+                    "ipv6": {}
+                },
+                "ptp": {
+                    "enable": "off"
+                },
+                "router": {
+                    "adaptive-routing": {
+                        "enable": "off"
+                    },
+                    "ospf": {
+                        "enable": "off"
+                    },
+                    "ospf6": {
+                        "enable": "off"
+                    },
+                    "pbr": {
+                        "map": {}
+                    },
+                    "pim": {
+                        "enable": "off"
+                    }
+                },
+                "sflow": {
+                    "state": "enabled"
+                },
+                "synce": {
+                    "enable": "off"
+                },
+                "type": "swp"
+            },
+            "swp5s0": {
+                "acl": {},
+                "bridge": {
+                    "domain": {
+                        "br_default": {
+                            "learning": "on",
+                            "stp": {
+                                "admin-edge": "off",
+                                "auto-edge": "on",
+                                "bpdu-filter": "off",
+                                "bpdu-guard": "off",
+                                "network": "off",
+                                "restrrole": "off",
+                                "vlan": {}
+                            },
+                            "untagged": 2500,
+                            "vlan": {
+                                "2500": {}
+                            }
+                        }
+                    }
+                },
+                "evpn": {
+                    "multihoming": {
+                        "uplink": "off"
+                    }
+                },
+                "ip": {
+                    "address": {},
+                    "gateway": {},
+                    "igmp": {
+                        "enable": "off"
+                    },
+                    "ipv4": {
+                        "forward": "on"
+                    },
+                    "ipv6": {
+                        "enable": "on",
+                        "forward": "on"
+                    },
+                    "neighbor-discovery": {
+                        "dnssl": {},
+                        "enable": "on",
+                        "home-agent": {
+                            "enable": "off"
+                        },
+                        "prefix": {},
+                        "rdnss": {},
+                        "router-advertisement": {
+                            "enable": "off"
+                        }
+                    },
+                    "vrf": "default",
+                    "vrrp": {
+                        "enable": "off"
+                    }
+                },
+                "link": {
+                    "auto-negotiate": "on",
+                    "breakout": {},
+                    "duplex": "full",
+                    "fec": "auto",
+                    "flap-protection": {
+                        "enable": "on"
+                    },
+                    "mtu": 9216,
+                    "speed": "auto",
+                    "state": {
+                        "up": {}
+                    }
+                },
+                "lldp": {},
+                "neighbor": {
+                    "ipv4": {},
+                    "ipv6": {}
+                },
+                "ptp": {
+                    "enable": "off"
+                },
+                "router": {
+                    "adaptive-routing": {
+                        "enable": "off"
+                    },
+                    "ospf": {
+                        "enable": "off"
+                    },
+                    "ospf6": {
+                        "enable": "off"
+                    },
+                    "pbr": {
+                        "map": {}
+                    },
+                    "pim": {
+                        "enable": "off"
+                    }
+                },
+                "sflow": {
+                    "state": "enabled"
+                },
+                "synce": {
+                    "enable": "off"
+                },
+                "type": "swp"
+            },
+            "swp5s1": {
+                "acl": {},
+                "bridge": {
+                    "domain": {
+                        "br_default": {
+                            "learning": "on",
+                            "stp": {
+                                "admin-edge": "off",
+                                "auto-edge": "on",
+                                "bpdu-filter": "off",
+                                "bpdu-guard": "off",
+                                "network": "off",
+                                "restrrole": "off",
+                                "vlan": {}
+                            },
+                            "untagged": 2500,
+                            "vlan": {
+                                "2500": {}
+                            }
+                        }
+                    }
+                },
+                "evpn": {
+                    "multihoming": {
+                        "uplink": "off"
+                    }
+                },
+                "ip": {
+                    "address": {},
+                    "gateway": {},
+                    "igmp": {
+                        "enable": "off"
+                    },
+                    "ipv4": {
+                        "forward": "on"
+                    },
+                    "ipv6": {
+                        "enable": "on",
+                        "forward": "on"
+                    },
+                    "neighbor-discovery": {
+                        "dnssl": {},
+                        "enable": "on",
+                        "home-agent": {
+                            "enable": "off"
+                        },
+                        "prefix": {},
+                        "rdnss": {},
+                        "router-advertisement": {
+                            "enable": "off"
+                        }
+                    },
+                    "vrf": "default",
+                    "vrrp": {
+                        "enable": "off"
+                    }
+                },
+                "link": {
+                    "auto-negotiate": "on",
+                    "breakout": {},
+                    "duplex": "full",
+                    "fec": "auto",
+                    "flap-protection": {
+                        "enable": "on"
+                    },
+                    "mtu": 9216,
+                    "speed": "auto",
+                    "state": {
+                        "up": {}
+                    }
+                },
+                "lldp": {},
+                "neighbor": {
+                    "ipv4": {},
+                    "ipv6": {}
+                },
+                "ptp": {
+                    "enable": "off"
+                },
+                "router": {
+                    "adaptive-routing": {
+                        "enable": "off"
+                    },
+                    "ospf": {
+                        "enable": "off"
+                    },
+                    "ospf6": {
+                        "enable": "off"
+                    },
+                    "pbr": {
+                        "map": {}
+                    },
+                    "pim": {
+                        "enable": "off"
+                    }
+                },
+                "sflow": {
+                    "state": "enabled"
+                },
+                "synce": {
+                    "enable": "off"
+                },
+                "type": "swp"
+            },
+            "swp5s2": {
+                "acl": {},
+                "bridge": {
+                    "domain": {
+                        "br_default": {
+                            "learning": "on",
+                            "stp": {
+                                "admin-edge": "off",
+                                "auto-edge": "on",
+                                "bpdu-filter": "off",
+                                "bpdu-guard": "off",
+                                "network": "off",
+                                "restrrole": "off",
+                                "vlan": {}
+                            },
+                            "untagged": 2500,
+                            "vlan": {
+                                "2500": {}
+                            }
+                        }
+                    }
+                },
+                "evpn": {
+                    "multihoming": {
+                        "uplink": "off"
+                    }
+                },
+                "ip": {
+                    "address": {},
+                    "gateway": {},
+                    "igmp": {
+                        "enable": "off"
+                    },
+                    "ipv4": {
+                        "forward": "on"
+                    },
+                    "ipv6": {
+                        "enable": "on",
+                        "forward": "on"
+                    },
+                    "neighbor-discovery": {
+                        "dnssl": {},
+                        "enable": "on",
+                        "home-agent": {
+                            "enable": "off"
+                        },
+                        "prefix": {},
+                        "rdnss": {},
+                        "router-advertisement": {
+                            "enable": "off"
+                        }
+                    },
+                    "vrf": "default",
+                    "vrrp": {
+                        "enable": "off"
+                    }
+                },
+                "link": {
+                    "auto-negotiate": "on",
+                    "breakout": {},
+                    "duplex": "full",
+                    "fec": "auto",
+                    "flap-protection": {
+                        "enable": "on"
+                    },
+                    "mtu": 9216,
+                    "speed": "auto",
+                    "state": {
+                        "up": {}
+                    }
+                },
+                "lldp": {},
+                "neighbor": {
+                    "ipv4": {},
+                    "ipv6": {}
+                },
+                "ptp": {
+                    "enable": "off"
+                },
+                "router": {
+                    "adaptive-routing": {
+                        "enable": "off"
+                    },
+                    "ospf": {
+                        "enable": "off"
+                    },
+                    "ospf6": {
+                        "enable": "off"
+                    },
+                    "pbr": {
+                        "map": {}
+                    },
+                    "pim": {
+                        "enable": "off"
+                    }
+                },
+                "sflow": {
+                    "state": "enabled"
+                },
+                "synce": {
+                    "enable": "off"
+                },
+                "type": "swp"
+            },
+            "swp5s3": {
+                "acl": {},
+                "bridge": {
+                    "domain": {
+                        "br_default": {
+                            "learning": "on",
+                            "stp": {
+                                "admin-edge": "off",
+                                "auto-edge": "on",
+                                "bpdu-filter": "off",
+                                "bpdu-guard": "off",
+                                "network": "off",
+                                "restrrole": "off",
+                                "vlan": {}
+                            },
+                            "untagged": 2500,
+                            "vlan": {
+                                "2500": {}
+                            }
+                        }
+                    }
+                },
+                "evpn": {
+                    "multihoming": {
+                        "uplink": "off"
+                    }
+                },
+                "ip": {
+                    "address": {},
+                    "gateway": {},
+                    "igmp": {
+                        "enable": "off"
+                    },
+                    "ipv4": {
+                        "forward": "on"
+                    },
+                    "ipv6": {
+                        "enable": "on",
+                        "forward": "on"
+                    },
+                    "neighbor-discovery": {
+                        "dnssl": {},
+                        "enable": "on",
+                        "home-agent": {
+                            "enable": "off"
+                        },
+                        "prefix": {},
+                        "rdnss": {},
+                        "router-advertisement": {
+                            "enable": "off"
+                        }
+                    },
+                    "vrf": "default",
+                    "vrrp": {
+                        "enable": "off"
+                    }
+                },
+                "link": {
+                    "auto-negotiate": "on",
+                    "breakout": {},
+                    "duplex": "full",
+                    "fec": "auto",
+                    "flap-protection": {
+                        "enable": "on"
+                    },
+                    "mtu": 9216,
+                    "speed": "auto",
+                    "state": {
+                        "up": {}
+                    }
+                },
+                "lldp": {},
+                "neighbor": {
+                    "ipv4": {},
+                    "ipv6": {}
+                },
+                "ptp": {
+                    "enable": "off"
+                },
+                "router": {
+                    "adaptive-routing": {
+                        "enable": "off"
+                    },
+                    "ospf": {
+                        "enable": "off"
+                    },
+                    "ospf6": {
+                        "enable": "off"
+                    },
+                    "pbr": {
+                        "map": {}
+                    },
+                    "pim": {
+                        "enable": "off"
+                    }
+                },
+                "sflow": {
+                    "state": "enabled"
+                },
+                "synce": {
+                    "enable": "off"
+                },
+                "type": "swp"
+            },
             "vlan2500": {
                 "acl": {},
                 "base-interface": "none",

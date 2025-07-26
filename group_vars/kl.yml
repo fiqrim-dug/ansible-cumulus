@@ -6,3 +6,5 @@ dns02: 172.18.255.102
 snmp_location: GF-TankRoom
 snmp_contact: Layer3
 
+ntp_server_1: 172.18.255.91
+ntp_server_2: 172.18.255.92

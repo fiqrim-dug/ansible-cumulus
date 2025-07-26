@@ -1,9 +1,16 @@
 
-- name: Set dhcp-relay and dns
+- name: Set dhcp-relay, dns and ntp
   nvidia.nvue.service:
     state: merged
     revid: '{{ revision.revid }}'
     data:
+      ntp:
+      - id : 'default'
+        server:
+        - id : '{{ ntp_server_1 }}'
+          iburst: on
+        - id : '{{ ntp_server_2 }}'
+          iburst: on
       dhcp_relay:
       - id : 'default'
         server:
