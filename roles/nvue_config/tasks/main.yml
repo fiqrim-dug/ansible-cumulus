@@ -23,3 +23,15 @@
             - id: '{{ vlan_id }}'
   register: bridge_config
 
+
+- name: Set dhcp-relay interface
+  nvidia.nvue.service:
+    state: merged
+    revid: '{{ revision.revid }}'
+    data:
+      dhcp_relay:
+      - id : 'default'
+        interface:
+        - id : 'bond1'
+        - id : 'bond2'
+        - id: 'vlan{{ vlan_id }}'
