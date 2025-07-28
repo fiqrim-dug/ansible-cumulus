@@ -1,30 +1,50 @@
+- name: Set vlan
+  nvidia.nvue.command:
+    commands:
+    - set interface vlan{{ breakout.vlan_id }} vlan {{ breakout.vlan_id }}
+    apply: true
+  register: vlan_config
+  when: ansible_connection != "ansible.netcommon.httpapi"
+
 - name: Set breakout interface
+  connection: ansible.netcommon.httpapi
   nvidia.nvue.interface:
     state: merged
     revid: '{{ revision.revid }}'
     data:
-      - id: '{{ breakout_interface }}'
+      - id: '{{ item.breakout_interface }}'
+        description: '{{ item.breakout_description }}'
         link:
           breakout:
-            - id: '{{ breakout_mode }}'
-  register: breakout_config
+            - id: '{{ item.breakout_mode }}'
+  loop: "{{ breakout }}"
 
-- name: Set bridge interface
+- name: Set bridge interface and vlan interface
+  connection: ansible.netcommon.httpapi
   nvidia.nvue.interface:
     state: merged
     revid: '{{ revision.revid }}'
     data:
+      - id: 'vlan{{ item.vlan_id }}'
+        description: "{{ item.breakout_description }}"
+        ip:
+          address: 
+          - id: "{{ item.vlan_ipadd }}"
+        # vlan:
+        # - id: '{{ vlan_id }}'
       - id: '{{ vlan_interface }}'
+        description: "{{ item.breakout_description }}"
         bridge:
           domain:
           - id: '{{ bridge_domain }}'
-            untagged: '{{ untagged_vlan }}'
+            untagged: '{{ item.vlan_id }}'
             vlan:
-            - id: '{{ vlan_id }}'
+            - id: '{{ item.vlan_id }}'
   register: bridge_config
-
+  loop: "{{ breakout }}"
 
 - name: Set dhcp-relay interface
+  connection: ansible.netcommon.httpapi
   nvidia.nvue.service:
     state: merged
     revid: '{{ revision.revid }}'
@@ -32,6 +52,6 @@
       dhcp_relay:
       - id : 'default'
         interface:
-        - id : 'bond1'
-        - id : 'bond2'
-        - id: 'vlan{{ vlan_id }}'
+        - id : '{{ uplink_interface }}'
+        - id: 'vlan{{ item.vlan_id }}'
+  loop: "{{ breakout }}"

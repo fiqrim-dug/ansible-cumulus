@@ -8,13 +8,13 @@
         name: nvue_revision
         tasks_from: pre
 
-- name: Run config
-  hosts: all
+- name: Run config for NVUE-capable switches
   connection: ansible.netcommon.httpapi
+  hosts: all
   gather_facts: false
   roles:
-    - role: base_config
-    - role: nvue_config
+    - role: base_config          # Common setup (hostname, SNMP, etc)
+    - role: nvue_config          # NVUE over HTTPAPI
 
 - name: Post NVUE revision
   hosts: all

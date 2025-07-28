@@ -1,1 +1,1 @@
-vlan_interface: '{{ breakout_interface }}s0-3'
+vlan_interface: '{{ item.breakout_interface }}s0-3'
