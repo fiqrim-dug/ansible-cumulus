@@ -27,3 +27,21 @@
     revid: '{{ revision.revid }}'
     data:
       hostname: "{{ inventory_hostname }}"
+
+- name: Set snmp and tacas
+  nvidia.nvue.command:
+    commands:
+    - set system aaa tacacs authentication mode chap
+    - set system aaa tacacs authentication per-user-homedir off
+    - set system aaa tacacs enable on
+    - set system aaa tacacs exclude-user cumulus
+    - set system aaa tacacs server 1 host {{ tacas_server }}
+    - set system aaa tacacs server 1 port {{ tacas_port }}
+    - set system aaa tacacs server 1 prefer-ip-version 4
+    - set system aaa tacacs server 1 secret '$nvsec$ec360a4e1bec30b726af5394691026a0'
+    - set system aaa tacacs timeout 10
+    - set system aaa tacacs vrf default
+    # - set system snmp-server readonly-community '$nvsec$604b56ce67c295d2bb143e8e4f4c89e0' access any
+    apply: true
+  register: sec_config
+  when: ansible_connection != "ansible.netcommon.httpapi"

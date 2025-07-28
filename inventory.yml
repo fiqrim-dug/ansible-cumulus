@@ -6,26 +6,26 @@ all:
           hosts:
             kgtg-slf-1-6:
               breakout:
-                - breakout_interface: swp5
+                - breakout_interface: swp1,swp2,swp3
                   breakout_mode: 4x
-                  breakout_description: Tank3-1 Data
-                  vlan_ipadd: 172.28.31.0/25
-                  vlan_id: 310
-                - breakout_interface: swp6
-                  breakout_mode: 4x
-                  breakout_description: Tank3-2 Data
-                  vlan_ipadd: 172.28.32.0/25
-                  vlan_id: 320
-                - breakout_interface: swp7
-                  breakout_mode: 4x
-                  breakout_description: Tank4-1 Data
-                  vlan_ipadd: 172.28.41.0/25
-                  vlan_id: 410
-                - breakout_interface: swp8
-                  breakout_mode: 4x
-                  breakout_description: Tank4-2 Data
-                  vlan_ipadd: 172.28.42.0/25
-                  vlan_id: 420
+                  breakout_description: Desktop
+                  vlan_ipadd: 172.28.250.254/24
+                  vlan_id: 2500
+  #               - breakout_interface: swp6
+  #                 breakout_mode: 4x
+  #                 breakout_description: Tank3-2 Data
+  #                 vlan_ipadd: 172.28.32.0/25
+  #                 vlan_id: 320
+  #               - breakout_interface: swp7
+  #                 breakout_mode: 4x
+  #                 breakout_description: Tank4-1 Data
+  #                 vlan_ipadd: 172.28.41.0/25
+  #                 vlan_id: 410
+  #               - breakout_interface: swp8
+  #                 breakout_mode: 4x
+  #                 breakout_description: Tank4-2 Data
+  #                 vlan_ipadd: 172.28.42.0/25
+  #                 vlan_id: 420
   vars:
     ansible_network_os: nvidia.nvue.httpapi
     ansible_httpapi_port: 8765
