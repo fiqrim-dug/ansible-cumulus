@@ -28,21 +28,21 @@ This repository automates NVIDIA NVUE switch configuration using Ansible. It sup
 └────┬────────┘
      │
      ▼
-┌─────-──────────┐
+┌────────────────┐
 │ Create Revision│
-└───-┬─-─────────┘
+└────┬───────────┘
      │
      ▼
-┌───-─────────────────┐
+┌─────────────────────┐
 │ Role Execution      │
 │ - Interfaces        │
-│ - SNMP, TACACS(TBD) │
+│ - SNMP, TACACS      │
 │ - Description/Host  │
 │ All under same revid│
 └────┬────────────────┘
      │
      ▼
-┌──-──────────────────┐
+┌─────────────────────┐
 │ Post-Check          │
 │ - Config diff (TBD) │
 │ - Validate          │
@@ -186,25 +186,64 @@ all:
       children:
         leaf:
           hosts:
-            kgtg-slf-1-6:
-            kgtg-slf-1-7:
-          vars:
-            ansible_network_os: nvidia.nvue.nvue
-        spine:
-          hosts:
-            kgtg-ssp-1-7:
-            kgtg-ssp-1-8:
-          vars:
-            ansible_network_os: nvidia.nvue.nvue
+            kgtg-slf-2-1:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank1-2 Data
+                  vlan_ipadd: 172.28.12.0/25
+                  vlan_id: 120
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank1-1 Data
+                  vlan_ipadd: 172.28.11.0/25
+                  vlan_id: 110
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank2-2 Data
+                  vlan_ipadd: 172.28.22.0/25
+                  vlan_id: 220
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank2-1 Data
+                  vlan_ipadd: 172.28.21.0/25
+                  vlan_id: 210
+            kgtg-slf-2-4:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank1-4 Data
+                  vlan_ipadd: 172.28.14.0/25
+                  vlan_id: 140
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank1-3 Data
+                  vlan_ipadd: 172.28.13.0/25
+                  vlan_id: 130
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank2-4 Data
+                  vlan_ipadd: 172.28.24.0/25
+                  vlan_id: 240
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank2-3 Data
+                  vlan_ipadd: 172.28.23.0/25
+                  vlan_id: 230
+  vars:
+    ansible_network_os: nvidia.nvue.httpapi
+    ansible_httpapi_port: 8765
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
 ```
 
 ---
 
 ## 🧩 Future Improvements
 
-- Add config validation tasks
-- Role for TACACS and SNMP
-- Rearrange inventory file
-- Calculate how many port being splitted when applied the breakout value
-- Separate playbook for backup config, apply config
-- Integrate CI for linting and test runs
+[/] Add config validation tasks
+[/] Role for TACACS and SNMP
+[] Rearrange inventory file
+[] Calculate how many port being splitted when applied the breakout value
+[] Separate playbook for backup config, apply config
+[] Integrate CI for linting and test runs
