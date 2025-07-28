@@ -243,7 +243,7 @@ all:
 
 - [x] Add config validation tasks
 - [x] Role for TACACS and SNMP
-- [ ] Rearrange inventory file
+- [x] Rearrange inventory file
 - [ ] Calculate how many port being splitted when applied the breakout value
 - [ ] Separate playbook for backup config, apply config
 - [ ] Integrate CI for linting and test runs

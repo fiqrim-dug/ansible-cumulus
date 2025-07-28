@@ -1,0 +1,4 @@
+ansible_network_os: nvidia.nvue.httpapi
+ansible_httpapi_port: 8765
+ansible_httpapi_use_ssl: true
+ansible_httpapi_validate_certs: false
