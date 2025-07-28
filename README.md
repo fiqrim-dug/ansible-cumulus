@@ -14,45 +14,45 @@ This repository automates NVIDIA NVUE switch configuration using Ansible. It sup
 
 ```plaintext
 ┌─────────────┐
-│ Inventory   │
-│ - Hosts     │
-│ - Region    │
-│ - Vault     │
+│ Inventory    │
+│ - Hosts      │
+│ - Region     │
+│ - Vault      │
 └────┬────────┘
      │
      ▼
 ┌─────────────┐
-│ Pre-Backup  │
-│ - Get config│
-│ - Save YAML │
+│ Pre-Backup   │
+│ - Get config │
+│ - Save YAML  │
 └────┬────────┘
      │
      ▼
 ┌────────────────┐
-│ Create Revision│
+│ Create Revision │
 └────┬───────────┘
      │
      ▼
 ┌─────────────────────┐
-│ Role Execution      │
-│ - Interfaces        │
-│ - SNMP, TACACS      │
-│ - Description/Host  │
-│ All under same revid│
+│ Role Execution        │
+│ - Interfaces          │
+│ - SNMP, TACACS        │
+│ - Description/Host    │
+│ All under same revid  │
 └────┬────────────────┘
      │
      ▼
 ┌─────────────────────┐
-│ Post-Check          │
-│ - Config diff (TBD) │
-│ - Validate          │
+│ Post-Check            │
+│ - Config diff (TBD)   │
+│ - Validate            │
 └────┬────────────────┘
      │
      ▼
 ┌──────────────┐
-│ Apply Config │
-│ - Apply revid│
-│ - Wait       │
+│ Apply Config  │
+│ - Apply revid │
+│ - Wait        │
 └──────────────┘
 ```
 
