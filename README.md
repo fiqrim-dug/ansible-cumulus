@@ -29,7 +29,7 @@ This repository automates NVIDIA NVUE switch configuration using Ansible. It sup
      │
      ▼
 ┌────────────────┐
-│ Create Revision  │
+│ Create Revision │
 └────┬───────────┘
      │
      ▼
@@ -241,9 +241,9 @@ all:
 
 ## 🧩 Future Improvements
 
-[ / ] Add config validation tasks
-[ / ] Role for TACACS and SNMP
-[ ] Rearrange inventory file
-[ ] Calculate how many port being splitted when applied the breakout value
-[ ] Separate playbook for backup config, apply config
-[ ] Integrate CI for linting and test runs
+- [x] Add config validation tasks
+- [x] Role for TACACS and SNMP
+- [ ] Rearrange inventory file
+- [ ] Calculate how many port being splitted when applied the breakout value
+- [ ] Separate playbook for backup config, apply config
+- [ ] Integrate CI for linting and test runs
