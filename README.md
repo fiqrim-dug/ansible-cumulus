@@ -230,6 +230,138 @@ all:
                   breakout_description: Tank2-3 Data
                   vlan_ipadd: 172.28.23.0/25
                   vlan_id: 230
+            kgtg-slf-2-5:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank1-6 Data
+                  vlan_ipadd: 172.28.16.0/25
+                  vlan_id: 160
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank1-5 Data
+                  vlan_ipadd: 172.28.15.0/25
+                  vlan_id: 150
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank2-6 Data
+                  vlan_ipadd: 172.28.26.0/25
+                  vlan_id: 260
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank2-5 Data
+                  vlan_ipadd: 172.28.25.0/25
+                  vlan_id: 250
+            kgtg-slf-2-8:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank1-8 Data
+                  vlan_ipadd: 172.28.18.0/25
+                  vlan_id: 180
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank1-7 Data
+                  vlan_ipadd: 172.28.17.0/25
+                  vlan_id: 170
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank2-8 Data
+                  vlan_ipadd: 172.28.28.0/25
+                  vlan_id: 280
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank2-7 Data
+                  vlan_ipadd: 172.28.27.0/25
+                  vlan_id: 270
+            kgtg-slf-3-1:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank4-1 Data
+                  vlan_ipadd: 172.28.41.0/25
+                  vlan_id: 410
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank4-2 Data
+                  vlan_ipadd: 172.28.42.0/25
+                  vlan_id: 420
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank3-1 Data
+                  vlan_ipadd: 172.28.31.0/25
+                  vlan_id: 310
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank3-2 Data
+                  vlan_ipadd: 172.28.32.0/25
+                  vlan_id: 320
+            kgtg-slf-3-4:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank4-3 Data
+                  vlan_ipadd: 172.28.43.0/25
+                  vlan_id: 430
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank4-4 Data
+                  vlan_ipadd: 172.28.44.0/25
+                  vlan_id: 440
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank3-3 Data
+                  vlan_ipadd: 172.28.33.0/25
+                  vlan_id: 330
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank3-4 Data
+                  vlan_ipadd: 172.28.34.0/25
+                  vlan_id: 340
+            kgtg-slf-3-5:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank4-5 Data
+                  vlan_ipadd: 172.28.45.0/25
+                  vlan_id: 450
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank4-6 Data
+                  vlan_ipadd: 172.28.46.0/25
+                  vlan_id: 460
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank3-5 Data
+                  vlan_ipadd: 172.28.35.0/25
+                  vlan_id: 350
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank3-6 Data
+                  vlan_ipadd: 172.28.36.0/25
+                  vlan_id: 360
+            kgtg-slf-3-8:
+              breakout:
+                - breakout_interface: swp1,swp3,swp5,swp7,swp9
+                  breakout_mode: 4x
+                  breakout_description: Tank4-7 Data
+                  vlan_ipadd: 172.28.47.0/25
+                  vlan_id: 470
+                - breakout_interface: swp2,swp4,swp6,swp8,swp10
+                  breakout_mode: 4x
+                  breakout_description: Tank4-8 Data
+                  vlan_ipadd: 172.28.48.0/25
+                  vlan_id: 480
+                - breakout_interface: swp11,swp13,swp15,swp17,swp19
+                  breakout_mode: 4x
+                  breakout_description: Tank3-7 Data
+                  vlan_ipadd: 172.28.37.0/25
+                  vlan_id: 370
+                - breakout_interface: swp12,swp14,swp16,swp18,swp20
+                  breakout_mode: 4x
+                  breakout_description: Tank3-8 Data
+                  vlan_ipadd: 172.28.38.0/25
+                  vlan_id: 380
   vars:
     ansible_network_os: nvidia.nvue.httpapi
     ansible_httpapi_port: 8765
